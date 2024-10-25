@@ -1,0 +1,71 @@
+1. strlen - Tính độ dài chuỗi
+char str[] = "Hello, World!";
+size_t len = strlen(str); // len = 13
+
+2. strcpy - Sao chép chuỗi
+char src[] = "Hello";
+char dest[20];
+strcpy(dest, src); // dest = "Hello"
+
+3. strncpy - Sao chép một số lượng ký tự nhất định
+char src[] = "Hello";
+char dest[20];
+strncpy(dest, src, 3); // dest = "Hel"
+
+4. strcat - Nối chuỗi
+char str1[20] = "Hello";
+char str2[] = " World";
+strcat(str1, str2); // str1 = "Hello World"
+
+5. strncat - Nối một số lượng ký tự nhất định
+char str1[20] = "Hello";
+char str2[] = " World";
+strncat(str1, str2, 3); // str1 = "Hello Wor"
+
+6. strcmp - So sánh chuỗi
+char str1[] = "Hello";
+char str2[] = "World";
+int result = strcmp(str1, str2); // result < 0
+
+7. strncmp - So sánh một số lượng ký tự nhất định
+char str1[] = "Hello";
+char str2[] = "Helium";
+int result = strncmp(str1, str2, 3); // result = 0 (vì 3 ký tự đầu giống nhau)
+
+8. strchr - Tìm ký tự trong chuỗi
+char str[] = "Hello, World!";
+char *ptr = strchr(str, 'W'); // ptr trỏ tới 'W' trong chuỗi
+
+9. strrchr - Tìm ký tự cuối cùng trong chuỗi
+char str[] = "Hello, World!";
+char *ptr = strrchr(str, 'o'); // ptr trỏ tới 'o' cuối cùng trong chuỗi
+
+10. strstr - Tìm chuỗi con trong chuỗi
+char str[] = "Hello, World!";
+char *ptr = strstr(str, "World"); // ptr trỏ tới "World"
+
+11. strtok - Cắt chuỗi thành các token
+char str[] = "Hello, World, C";
+char *token = strtok(str, ", "); // token = "Hello"
+while (token != NULL) {
+    printf("%s\n", token);
+    token = strtok(NULL, ", ");
+}
+
+12. memset - Thiết lập giá trị cho mảng
+char str[50];
+memset(str, 'A', sizeof(str)); // Tất cả các phần tử của str sẽ là 'A'
+
+13. memcpy - Sao chép vùng nhớ
+char src[] = "Hello";
+char dest[20];
+memcpy(dest, src, strlen(src) + 1); // dest = "Hello"
+
+14. memmove - Sao chép vùng nhớ chồng lấp
+char str[] = "Hello, World!";
+memmove(str + 7, str, 5); // str = "Hello, Hello!"
+
+15. memcmp - So sánh vùng nhớ
+char str1[] = "ABC";
+char str2[] = "ABD";
+int result = memcmp(str1, str2, 3); // result < 0 vì 'C' < 'D'
