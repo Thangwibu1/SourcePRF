@@ -21,6 +21,6 @@ int checkPowerOf2(int n) {
 }
 
 int main() {
-    printf("%d", checkPowerOf2(2));
+    printf("%d", checkPowerOf2(1024));
     return 0;
 }
