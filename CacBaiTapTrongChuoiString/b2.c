@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int countWords(const char *str) {
+int countWords(char *str) {
     int count = 0;
     int inWord = 0;
 
@@ -19,7 +19,8 @@ int countWords(const char *str) {
 }
 
 int main() {
-    const char *text = "helo helo    helloooo   h";
-    printf("Number of words: %d\n", countWords(text)); // Output: 3
+    char *s[50];
+    gets(s);
+    printf("Number of words: %d\n", countWords(s)); // Output: 3
     return 0;
 }
